@@ -2,6 +2,101 @@
 title: "React Basics"
 description: "Learn the fundamentals of React, including components, props, and state management."
 ---
+
 # Understanding React Basics
+
 ## Introduction
 React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components, manage state, and efficiently update the DOM. In this lesson, we'll cover the fundamental concepts of React, including components, props, and state management.
+
+## Getting Started
+
+To use React, you need to set up a React environment. The easiest way to start is with [Create React App](https://create-react-app.dev/):
+
+```bash
+npx create-react-app my-app
+cd my-app
+npm start
+```
+
+This sets up a development environment with React, Babel, and Webpack preconfigured.
+
+## Components
+
+Components are the building blocks of a React application. A component is a JavaScript function that returns JSX (a syntax extension that looks like HTML).
+
+### Example of a Functional Component:
+```jsx
+function Welcome() {
+  return <h1>Hello, React!</h1>;
+}
+```
+
+### Rendering a Component
+To render a component in your app:
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Welcome from './Welcome';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Welcome />);
+```
+
+## Props
+
+**Props** (short for “properties”) are how you pass data from parent to child components.
+
+### Example:
+```jsx
+function Greeting(props) {
+  return <h2>Hello, {props.name}!</h2>;
+}
+
+// Usage
+<Greeting name="Alice" />
+```
+
+Props are **read-only** — you can use them to customize a component but not to change them inside that component.
+
+## State
+
+**State** allows components to manage and respond to changes over time. It’s typically used for interactivity and data that changes.
+
+You can use the `useState` hook in functional components:
+
+```jsx
+import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times.</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+```
+
+## Component Lifecycle (Simplified)
+
+In functional components, **hooks** like `useEffect()` are used to handle lifecycle events like mounting, updating, and unmounting.
+
+```jsx
+import { useEffect } from 'react';
+
+useEffect(() => {
+  console.log("Component mounted");
+
+  return () => {
+    console.log("Component will unmount");
+  };
+}, []);
+```
+
+## Conclusion
+
+React provides a powerful and flexible way to build dynamic user interfaces. In this lesson, you learned the basics of React components, how to pass data using props, and how to manage state using hooks. These concepts form the foundation of building real-world React applications.
+
+Next up: [React Hooks →](./react-hooks)

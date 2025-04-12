@@ -2,6 +2,88 @@
 title: "Python Basics"
 description: "Learn the fundamentals of Python programming, including syntax, data types, and control flow."
 ---
+
 # Understanding Python Basics
+
 ## Introduction
 Python is a high-level, interpreted programming language known for its readability and simplicity. It is widely used in various fields, including web development, data analysis, artificial intelligence, and more. In this lesson, we'll cover the fundamental concepts of Python programming, including syntax, data types, and control flow.
+
+## Getting Started
+
+To start programming in Python, you need to have Python installed on your computer. You can download it from the official website: [https://python.org](https://python.org).
+
+Once installed, you can write and run Python code using:
+- The Python interactive shell (`python` or `python3` command)
+- A code editor like VS Code or PyCharm
+- Online editors like Replit or Google Colab
+
+## Python Syntax
+
+Python uses indentation (whitespace) to define blocks of code instead of curly braces or keywords.
+
+Example:
+```python
+if True:
+    print("This is indented and will run.")
+```
+
+### Comments
+Comments start with a `#` symbol:
+```python
+# This is a comment
+```
+
+### Variables
+Variables are used to store data. You don’t need to declare their type explicitly.
+```python
+name = "Alice"
+age = 25
+is_student = True
+```
+
+## Data Types
+
+Common Python data types include:
+
+| Type      | Example              |
+|-----------|----------------------|
+| String    | `"Hello"`            |
+| Integer   | `10`                 |
+| Float     | `3.14`               |
+| Boolean   | `True`, `False`      |
+| List      | `[1, 2, 3]`          |
+| Tuple     | `(1, 2, 3)`          |
+| Dictionary | `{"name": "Alice"}` |
+
+## Control Flow
+
+Control flow allows you to execute different code depending on conditions or loop through code multiple times.
+
+### If Statements
+```python
+x = 10
+if x > 5:
+    print("x is greater than 5")
+```
+
+### Loops
+
+**For Loop:**
+```python
+for i in range(5):
+    print(i)
+```
+
+**While Loop:**
+```python
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+```
+
+## Conclusion
+
+In this lesson, we introduced the basics of Python programming: syntax, variables, data types, and control flow. These are the building blocks of Python, and mastering them will prepare you for more advanced topics such as functions, modules, and object-oriented programming.
+
+Next up: [Python Functions →](./python-functions)
